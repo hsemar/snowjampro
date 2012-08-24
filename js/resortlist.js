@@ -6,7 +6,7 @@ $('#resortListPage').live('pageshow', function(event) {
 		$.each(locations, function(index, location) {
 			if(index==id) {
 				$.each(location, function(value, resort) {
-					$('#resortList').append('<li><a href="resortview.html?loc='+index+'&id='+value+'">'+value+'</a></li>');		
+					$('#resortList').append('<li data-theme="c"><a href="resortview.html?loc='+index+'&id='+value+'">'+value+'</a></li>');		
 				});
 			}	
 		});

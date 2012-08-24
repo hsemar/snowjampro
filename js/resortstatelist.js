@@ -1,5 +1,7 @@
-//var JSONListURL = "http://localhost/resorts/resources/resort.json";
-var JSONListURL = "http://wise.wisdominfotech.com/jsonweb/index.jsp";
+var JSONListURL = "http://wise.wisdominfotech.com/jsonweb/index.jsp?callback=?";
+var imageURL = "http://wise.wisdominfotech.com/jsonweb/images/";
+//var JSONListURL = "http://wise.wisdominfotech.com/jsonweb/index.jsp";
+//var imageURL = "http://wise.wisdominfotech.com/jsonweb/images/";
 
 var locations;
 
@@ -12,7 +14,7 @@ function getLocationsList() {
 		$('#resortLocations li').remove();
 		locations = data.Resorts;
 		$.each(locations, function(index, location) {
-			$('#resortLocations').append('<li><a href="resortlist.html?id='+index+'">'+index+'</a></li>'); 
+			$('#resortLocations').append('<li data-theme="c"><a href="resortlist.html?id='+index+'">'+index+'</a></li>'); 
 		});
 		$('#resortLocations').listview('refresh');
 	});

@@ -9,8 +9,10 @@ $('#resortviewPage').live('pageshow', function(event) {
 				id = id.replace("%20",' ');
 					if(value==id){
 					    //$('#resortView').remove();
+						$('#resortName').html(id);
 						$.each(resort, function(resortindex, resortdetails) {
-						      	var innerhtml = "<img src='images/"+resortdetails.Image+"' width='25' height='25' /><div id=resortDetails"+resortindex+"><h3 id=title1>"+resortdetails.Title+"</h3><p id=description1>"+resortdetails.Description+"</p></div>";
+								var img = imageURL + resortdetails.Image;
+						      	var innerhtml = "<img src='"+img+"' width='25' height='25' /><div id=resortDetails"+resortindex+"><h3 id=title1>"+resortdetails.Title+"</h3><p id=description1>"+resortdetails.Description+"</p></div>";
 							$('#resortView').append(innerhtml);
 						});
 					}
